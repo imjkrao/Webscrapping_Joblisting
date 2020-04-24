@@ -1,7 +1,7 @@
 library(rvest)
 library(xml2)
 library(Stack)
-page_result_start <-10 # second page num in url 
+page_result_start <-2 # second page num in url 
 page_result_end <- 50 # last page num in url
 page_results <- seq(from = page_result_start, to = page_result_end, by = 1)
 
@@ -63,7 +63,7 @@ for(i in seq_along(page_results)) {
   
   job_description <- c()
   job_updation <- c()
-  job_skills <- c()
+  job_skills <- list()
   for(j in seq_along(links)) {
     
     url1 <- paste0("https://www.beseen.com/tech-jobs/", links[j])
@@ -100,6 +100,6 @@ for(i in seq_along(page_results)) {
   full_df <- rbind(full_df,df)
    # print("done2")
 }
-write.csv(full_df, "seenJobs_new10_.csv")
+write.csv(full_df, "seenJobstrailofList.csv")
   
   

@@ -15,6 +15,7 @@ job_title <- page %>%
   rvest::html_nodes("div") %>%
   rvest::html_nodes(xpath = '//*[@class = "serp-title"]/a') %>%
   rvest::html_attr("title")
+  #rvest::html_text(trim = TRUE)
 
 #get the company name
 company_name <- page %>% 
