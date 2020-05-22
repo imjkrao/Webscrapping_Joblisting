@@ -100,6 +100,6 @@ for(i in seq_along(page_results)) {
   full_df <- rbind(full_df,df)
    # print("done2")
 }
-write.csv(full_df, "seenJobstrailofList.csv")
+write.csv(full_df, "seenJobs.csv")
   
   
